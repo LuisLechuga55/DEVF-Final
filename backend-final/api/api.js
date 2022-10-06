@@ -19,4 +19,5 @@ api.use('/ecommerce/costumer', costumerRoutes);
 
 api.use('/ecommerce/product', productRoutes);
 
+
 export default api;
