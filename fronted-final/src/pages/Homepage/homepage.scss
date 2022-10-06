@@ -1,0 +1,97 @@
+header {
+  position: relative;
+  background-color: black;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.text-top {
+  display: grid;
+  place-items: center;
+  margin-top: 10rem;
+}
+
+.main-section {
+  background-color: #cecece;
+}
+
+// .main-card {
+//   display: grid;
+//   grid-template-columns: repeat(5, 1fr);
+//   background-color: #cecece;
+// }
+
+.main-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slider-container {
+  height: 39rem;
+  width: 82vw;
+  margin-top: 5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: #232323;
+  border-radius: 2rem;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: grab;
+}
+
+.item {
+  margin-top: 3rem;
+  margin-right: 3.2rem;
+}
+
+.item img {
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.slider-container .item {
+  opacity: 0.9;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #cecece;
+  margin-top: 5rem;
+}

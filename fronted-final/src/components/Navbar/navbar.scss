@@ -1,0 +1,252 @@
+.Navbar__main {
+  padding: 1rem;
+  background: #131921;
+}
+
+.Navbar-list {
+padding: 1rem;
+}
+
+.Navbar-list:hover {
+  border: 1px solid white;
+}
+
+.Navbar__box {
+  display: flex;
+  gap: var(--gap, 0.5rem);
+  justify-content: space-between;
+  align-items: center;
+  
+  
+  .logo-navbar {
+    background-size: cover;
+    margin-left: 0.5rem;
+    padding-top: 0.5rem;
+    width: 6.5rem;
+    height: 2.6rem;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .logo-navbar:hover {
+    transform: scale(1.05);
+  }
+}
+
+.Navbar__links {
+  list-style: none;
+  justify-content: center;
+  margin-right: auto;
+  background: transparent;
+  // background: hsl(0 0% 100% / 0.1);
+  // backdrop-filter: blur(1rem);
+}
+
+// @supports (backdrop-filter: blur(1rem)) {
+//   .Navbar__links {
+//     background: hsl(0 0% 100% / 0.1);
+//     backdrop-filter: blur(1rem);
+//   }
+// }
+
+.Navbar__links .Navbar-list {
+  text-decoration: none;
+  color: white;
+}
+
+.Navbar__links a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: 0.25rem;
+}
+
+li:first-child {
+    margin-left: 1rem;
+}
+
+// @media (max-width: 35em) {
+//   .Navbar__links {
+//     gap: 2em;
+
+//     position: fixed;
+//     inset: 0 0 0 25%;
+    
+//     flex-direction: column;
+//     padding: min(30vh, 10rem) 2rem;
+//   }
+// }
+
+.search {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.search .searchTerm {
+  width: 100%;
+  border-right: none;
+  padding: 5px;
+  height: 4.5vh;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  margin-top: 2px;
+  width: 40px;
+  height: 41px;
+  border: 1px solid #cc6600;
+  background: #cc6600;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchButton:hover {
+  background: #e37100;
+  transition: 0.5s;
+}
+
+.wrap{
+  width: 40%;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-container {
+  float: right;
+}
+
+.Drop__main {
+  margin-right: 1rem;
+  width: 13rem;
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  // background: yellow;
+
+  span {
+    cursor: pointer;
+  }
+
+  ul { 
+    opacity: 0.85;
+    background: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.Drop__main:hover {
+  border: 1px solid white;
+}
+
+.Dropdown-container li {
+  margin-top: 0.4rem;
+  width: 18rem;
+  height: 5rem;
+  font-size: 18px;
+  text-align: center;
+  
+  
+  button {
+    width: 10rem;
+    height: 2rem;
+    margin-right: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.Drop__main .btn-sign {
+  background: #fffa65;
+  border-radius: 7%;
+  border: 1px solid rgba(207, 207, 26, 0.712);
+}
+
+.Dropdown-container button {
+  transition: all 0.6s ease-in-out;
+}
+
+.Dropdown-container button:hover {
+  transform: scale(1.01);
+}
+
+.Dropdown-container .btn-signup:hover {
+  background: yellow;
+}
+
+.Drop__main .btn-login:hover {
+  color: #34495e;
+}
+
+.Drop-login-container{
+  width: 18rem;
+  height: 10rem;
+  
+  button {
+    width: 10rem;
+    height: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.Drop-login-container .btn-perfil {
+  display: grid;
+  place-items: end;
+  background: transparent;
+  border: transparent;
+}
+
+.Drop-login-container button {
+  transition: all 0.6s ease-in-out;
+}
+
+.Drop-login-container button:hover {
+  transform: scale(1.01);
+}
+
+.Drop-login-container .btn-logout:hover {
+  background: yellow;
+}
+
+.Drop-login-container .btn-perfil:hover {
+  color: #34495e;
+}
+
+.Drop__main .btn-login {
+  margin-left: 2rem;
+  background: transparent;
+  border: transparent;
+}
+
+.cart-shop:hover {
+  border: none;
+}
+
+.shop-logo {
+  background-size: cover;
+  cursor: pointer;
+  width: 3rem;
+  height: 3.5rem;
+  transition: all 0.6s ease-in-out;
+}
+
+.shop-logo:hover {
+  transform: scale(1.05);
+}

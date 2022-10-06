@@ -1,0 +1,132 @@
+.container {
+  position: relative;
+}
+
+.container .card {
+  position: relative;
+  width: 20rem;
+  height: 32rem;
+  background: #FAFAFA;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.container .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:after {
+  content: "DEVF";
+  position: absolute;
+  top: 45%;
+  left: -28%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.05);
+
+}
+
+.container .card .imgBx {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  transition: 0.8s;
+}
+
+.container .card:hover .imgBx {
+  top: 0%;
+  opacity: 0.45;
+  transform: translateY(-25%);
+  /* bug  */
+}
+
+.container .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 17rem;
+}
+
+.container .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 90;
+}
+
+.container .card:hover .contentBx {
+  height: 210px;
+}
+
+.container .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #232323;
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.8s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .card:hover .contentBx .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #232323;
+  color: #FAFAFA;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: .5s;
+}
+
+.container .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: .6s;
+}
