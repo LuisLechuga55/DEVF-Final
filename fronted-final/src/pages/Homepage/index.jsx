@@ -87,7 +87,7 @@ function Homepage () {
           <motion.div
             className='slider-vertical'
             drag='y'
-            dragConstraints={{ bottom: -0, top: -4590 }}
+            dragConstraints={{ bottom: -15, top: -4790 }}
           >
             {items.slice(440, 449).map(product => (
               <motion.div className='item-vertical' key={product._id}>
@@ -110,7 +110,7 @@ function Homepage () {
           <motion.div
             className='slider-vertical'
             drag='y'
-            dragConstraints={{ bottom: -0, top: -4590 }}
+            dragConstraints={{ bottom: -15, top: -4790 }}
           >
             {items.slice(420, 429).map(product => (
               <motion.div className='item-vertical' key={product._id}>
@@ -133,7 +133,7 @@ function Homepage () {
           <motion.div
             className='slider-vertical'
             drag='y'
-            dragConstraints={{ bottom: -0, top: -4590 }}
+            dragConstraints={{ bottom: -15, top: -4790 }}
           >
             {items.slice(400, 409).map(product => (
               <motion.div className='item-vertical' key={product._id}>
@@ -156,7 +156,7 @@ function Homepage () {
           <motion.div
             className='slider-vertical'
             drag='y'
-            dragConstraints={{ bottom: -0, top: -4590 }}
+            dragConstraints={{ bottom: -15, top: -4790 }}
           >
             {items.slice(10, 19).map(product => (
               <motion.div className='item-vertical' key={product._id}>
@@ -187,7 +187,7 @@ function Homepage () {
                 <h3>About</h3>
 
                 <ul>
-                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate in delectus eum nesciunt incidunt molestias voluptate consequuntur, repellat quae, perspiciatis vel explicabo quaerat perferendis neque iusto asperiores natus aspernatur reprehenderit facilis</li>
+                  <li className='text-about'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate in delectus eum nesciunt incidunt molestias voluptate consequuntur, repellat quae, perspiciatis vel explicabo quaerat perferendis neque iusto asperiores natus aspernatur reprehenderit facilis</li>
                 </ul>
 
               </div>
@@ -197,7 +197,7 @@ function Homepage () {
                 <h3>Support</h3>
 
                 <ul>
-                  <li><a href='#'>About Us</a></li>
+                  <li className='m-0'><a href='#'>About Us</a></li>
                   <li><a href='#'>Contact Us</a></li>
                   <li><a href='#'>Conribute</a></li>
                   <li><a href='#'>Privacy Policy</a></li>
@@ -211,7 +211,7 @@ function Homepage () {
                 <h3>Categories</h3>
 
                 <ul>
-                  <li><a href='#'>Action</a></li>
+                  <li className='m-0'><a href='#'>Action</a></li>
                   <li><a href='#'>Anime</a></li>
                   <li><a href='#'>Animals</a></li>
                   <li><a href='#'>Games</a></li>
@@ -225,7 +225,7 @@ function Homepage () {
                 <h3>Follow Us</h3>
 
                 <ul>
-                  <li>
+                  <li className='m-0'>
                     <a href='#'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

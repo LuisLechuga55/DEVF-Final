@@ -1,132 +1,81 @@
-.container {
-  position: relative;}
-
-.container .card-horizontal {
+.top-product-card {
   position: relative;
-  width: 20rem;
-  height: 32rem;
-  background: #FAFAFA;
-  border-radius: 1.25rem;
+  width: 330px;
+  height: 535px;
+  background: #fafafa;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 6px 6px 12px gray;
+  box-shadow: 2px 6px 8px #cecece;
 }
 
-.container .card-horizontal:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #FAFAFA;
-  transition: 0.5s ease-in-out;
+.top-product-card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
 }
 
-.container .card-horizontal:after {
-  content: "DEVF";
-  position: absolute;
-  top: 45%;
-  left: -28%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.05);
-
-}
-
-.container .card-horizontal .imgBx {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  width: 100%;
-  height: 100%;
-  transition: 0.8s;
-}
-
-.container .card-horizontal:hover .imgBx {
-  top: 0%;
-  opacity: 0.45;
-  transform: translateY(-25%);
-  /* bug  */
-}
-
-.container .card-horizontal .imgBx img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 17rem;
-}
-
-.container .card-horizontal .contentBx {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  transition: 1s;
-  z-index: 90;
-}
-
-.container .card-horizontal:hover .contentBx {
-  height: 210px;
-}
-
-.container .card-horizontal .contentBx h2 {
+.top-product-card .top-product-imgBox {
   position: relative;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #232323;
-}
-
-.container .card-horizontal .contentBx .size,
-.container .card-horizontal .contentBx .color {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 20px;
-  transition: 0.8s;
-  opacity: 0;
-  visibility: hidden;
+  padding-top: 20px;
+  z-index: 1;
 }
 
-.container .card-horizontal:hover .contentBx .size {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0.5s;
+.top-product-card .top-product-contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
 }
 
-.container .card-horizontal:hover .contentBx .color {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: .6s;
-}
-
-.container .card-horizontal .contentBx .size h3,
-.container .card-horizontal .contentBx .color h3 {
-  color: black;
+.top-product-card .top-product-contentBox h3 {
+  font-size: 18px;
+  color: #000000;
   font-weight: bold;
-  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.container .card-horizontal .contentBx a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #232323;
-  color: #FAFAFA;
-  border-radius: 5px;
-  text-decoration: none;
+.top-product-card .top-product-contentBox .top-product-price {
+  font-size: 20px;
+  color: #000000;
   font-weight: 600;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: .5s;
+  letter-spacing: 2px;
+}
+.top-product-card .top-product-contentBox .top-product-text {
+  margin-top: 32px;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 1px;
 }
 
-.container .card-horizontal:hover .contentBx a {
+.top-product-card .top-product-contentBox .top-product-buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #cecece;
+  text-decoration: none;
+  background: rgba(#232323, 0.9);
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.top-product-card:hover .top-product-contentBox .top-product-buy {
+  top: 0;
   opacity: 1;
-  transform: translateY(0px);
-  transition-delay: .6s;
+}
+
+.top-product-mouse {
+  object-fit: cover;
+  height: 300px;
+  width: auto;
 }

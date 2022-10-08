@@ -39,6 +39,14 @@ header .overlay {
   z-index: 1;
 }
 
+.main-section {
+  background-color: #cecece;
+  color: #232323;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 /* End Header */
 
 /* Top Products */
@@ -46,17 +54,14 @@ header .overlay {
 .text-top {
   display: grid;
   place-items: center;
-  margin-top: 10rem;
-}
-
-.main-section {
-  background-color: #cecece;
+  margin-top: 8rem;
 }
 
 .main-card {
   display: flex;
   justify-content: space-evenly;
 }
+
 
 .slider-container {
   height: 39rem;
@@ -97,7 +102,7 @@ header .overlay {
 .vertical-card {
   display: flex;
   justify-content: space-evenly;
-  background: #cc6600;
+  background: rgba(#cc6600, 0.6);
   margin-top: 4rem;
   border-radius: 1rem;
 }
@@ -105,7 +110,7 @@ header .overlay {
 .slider-container-vertical {
   height: 40rem;
   width: 24rem;
-  margin-top: 5rem;
+  margin: 3rem 0rem;
   overflow-x: hidden;
   overflow-y: hidden;
   background: #232323;
@@ -149,9 +154,13 @@ header .overlay {
 }
 .footer-item {
   font-size: 15px;
-  place-content: center;
   display: inline-block;
-  width: calc(100% / 4.4);
+  text-align: center;
+  width: calc(90% / 4);
+}
+
+.footer-item .text-about {
+  margin-right: 1rem;
 }
 .footer-item ul li a {
   line-height: 2.5;
