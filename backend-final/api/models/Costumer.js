@@ -28,7 +28,7 @@ const costumerSchema = new mongoose.Schema({
   role: {
     type: String,
     enum: ['seller', 'costumer'],
-    default: 'user'
+    default: 'costumer'
   }
 },
   { timestamps: true }

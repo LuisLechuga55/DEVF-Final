@@ -7,6 +7,7 @@ const costumerSchema = joi.object({
   phone: joi.string(),
   email: joi.string().required(),
   password: joi.string().required(),
+  role: joi.string()
 });
 
 export default async (req, res, next) => {
