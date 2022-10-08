@@ -22,7 +22,7 @@
 .card:hover::before {
   top: -60%;
   transform: skewY(390deg);
-  background-color: #cc6600;
+  background-color: #fff;
 }
 
 .card .imgBox {
@@ -37,14 +37,9 @@
 
 .card .imgBox img {
     max-width: 100%;
-    
     transition: .5s;
 }
 
-.card:hover .imgBox img {
-    max-width: 90%;
-      
-}
 
 .card .contentBox {
   position: relative;

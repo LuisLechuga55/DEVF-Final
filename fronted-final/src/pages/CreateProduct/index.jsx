@@ -1,10 +1,10 @@
 import { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import useForm from '../../hooks/useForm'
-import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 
-function SellPage () {
+function CreateProduct () {
   const navigate = useNavigate()
   const { costumer } = useContext(AuthContext)
 
@@ -34,11 +34,11 @@ function SellPage () {
   })
 
   return (
-    <div>SellPage</div>
+    <div>CreateProduct</div>
   )
 }
 
-export default SellPage
+export default CreateProduct
 
 // Automotriz,
 // Belleza,

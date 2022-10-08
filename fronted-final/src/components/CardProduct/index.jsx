@@ -6,7 +6,7 @@ function CardProduct ({ image, name, price, category, brand, id }) {
   return (
     <div className='card-container'>
       <div className='container'>
-        <div className='card'>
+        <div className='card-horizontal'>
           <div className='imgBx'>
             <img src={image} alt='Image Not Found' />
           </div>
@@ -16,7 +16,7 @@ function CardProduct ({ image, name, price, category, brand, id }) {
             <h2>{name}</h2>
 
             <div className='size'>
-              <h3>{price} €</h3>
+              <h3>€ {price}</h3>
             </div>
 
             <div className='color'>
@@ -24,7 +24,9 @@ function CardProduct ({ image, name, price, category, brand, id }) {
               <h3>{category}</h3>
               <h3>{brand}</h3>
             </div>
+
             <Link to={`/product/${id}`}>Informacion</Link>
+
           </div>
 
         </div>

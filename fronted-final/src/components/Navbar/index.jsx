@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './navbar.scss'
 
-function Navbar () {
+function Navbar (props) {
+  const { countCartItems } = props
   const [perfil, setPerfil] = useState([])
 
   const { isAuth } = useContext(AuthContext)
@@ -134,10 +135,17 @@ function Navbar () {
 
           <li>
             <Link to='/cart' className='Navbar-list px-4 cart-shop'>
+
               <img
                 src='/src/assets/img/cartShop.png'
                 className='shop-logo'
-              />
+              /> {' '}
+              {countCartItems
+                ? (
+                  <button className='badge'>{countCartItems}</button>
+                  )
+                : ('')}
+
             </Link>
           </li>
 

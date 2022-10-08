@@ -1,3 +1,5 @@
+/* Header */
+
 header {
   position: relative;
   background-color: black;
@@ -37,6 +39,10 @@ header .overlay {
   z-index: 1;
 }
 
+/* End Header */
+
+/* Top Products */
+
 .text-top {
   display: grid;
   place-items: center;
@@ -47,12 +53,6 @@ header .overlay {
   background-color: #cecece;
 }
 
-// .main-card {
-//   display: grid;
-//   grid-template-columns: repeat(5, 1fr);
-//   background-color: #cecece;
-// }
-
 .main-card {
   display: flex;
   justify-content: space-evenly;
@@ -60,7 +60,7 @@ header .overlay {
 
 .slider-container {
   height: 39rem;
-  width: 82vw;
+  width: 95vw;
   margin-top: 5rem;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -72,6 +72,7 @@ header .overlay {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 1rem;
   cursor: grab;
 }
 
@@ -89,9 +90,101 @@ header .overlay {
   opacity: 0.9;
 }
 
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  background: #cecece;
-  margin-top: 5rem;
+/* End Top Product */
+
+/* Start Other Product */
+
+.vertical-card {
+  display: flex;
+  justify-content: space-evenly;
+  background: #cc6600;
+  margin-top: 4rem;
+  border-radius: 1rem;
 }
+
+.slider-container-vertical {
+  height: 40rem;
+  width: 24rem;
+  margin-top: 5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: #232323;
+  border-radius: 2rem;
+}
+
+.slider-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: grab;
+}
+
+.item-vertical {
+  margin-top: 4rem;
+}
+
+.item-vertical img {
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.slider-container-vertical .item-vertical {
+  opacity: 0.8;
+}
+
+/* End Other Product */
+
+/* Footer */
+
+.footer__main {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  margin-top: 10rem;
+}
+.footer__container {
+  width: 100%;
+  place-content: center;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+.footer-item {
+  font-size: 15px;
+  place-content: center;
+  display: inline-block;
+  width: calc(100% / 4.4);
+}
+.footer-item ul li a {
+  line-height: 2.5;
+  transition: all;
+}
+.footer-item ul li a:hover {
+  background-color: transparent;
+  color: whitesmoke;
+  transition: .5s;
+}
+.footer-item h3 {
+  text-align: center;
+  padding: 15px 0 18px 29px;
+}
+.footer__main ul li {
+  list-style: none;
+  color: gray;
+}
+.footer__container a {
+  color: gray;
+  text-decoration: none;
+}
+.footer__foot {
+  border-top: 1px solid gray ;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+.footer__foot__h {
+  color: gray;
+  font-size: 12px;
+  font-weight:lighter;
+  padding-left: 4rem;
+}
+
+/* End Footer */

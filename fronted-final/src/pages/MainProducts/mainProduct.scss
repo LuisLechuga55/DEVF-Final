@@ -1,0 +1,12 @@
+.main-text-product {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: rgba(#cecece, 0.4);
+  margin-top: 5rem;
+}

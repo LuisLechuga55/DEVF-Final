@@ -1,17 +1,17 @@
 .container {
-  position: relative;
-}
+  position: relative;}
 
-.container .card {
+.container .card-horizontal {
   position: relative;
   width: 20rem;
   height: 32rem;
   background: #FAFAFA;
   border-radius: 1.25rem;
   overflow: hidden;
+  box-shadow: 6px 6px 12px gray;
 }
 
-.container .card:before {
+.container .card-horizontal:before {
   content: "";
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.container .card:after {
+.container .card-horizontal:after {
   content: "DEVF";
   position: absolute;
   top: 45%;
@@ -34,7 +34,7 @@
 
 }
 
-.container .card .imgBx {
+.container .card-horizontal .imgBx {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
@@ -44,14 +44,14 @@
   transition: 0.8s;
 }
 
-.container .card:hover .imgBx {
+.container .card-horizontal:hover .imgBx {
   top: 0%;
   opacity: 0.45;
   transform: translateY(-25%);
   /* bug  */
 }
 
-.container .card .imgBx img {
+.container .card-horizontal .imgBx img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,7 +59,7 @@
   width: 17rem;
 }
 
-.container .card .contentBx {
+.container .card-horizontal .contentBx {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -69,19 +69,19 @@
   z-index: 90;
 }
 
-.container .card:hover .contentBx {
+.container .card-horizontal:hover .contentBx {
   height: 210px;
 }
 
-.container .card .contentBx h2 {
+.container .card-horizontal .contentBx h2 {
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
   color: #232323;
 }
 
-.container .card .contentBx .size,
-.container .card .contentBx .color {
+.container .card-horizontal .contentBx .size,
+.container .card-horizontal .contentBx .color {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,20 +91,20 @@
   visibility: hidden;
 }
 
-.container .card:hover .contentBx .size {
+.container .card-horizontal:hover .contentBx .size {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
 }
 
-.container .card:hover .contentBx .color {
+.container .card-horizontal:hover .contentBx .color {
   opacity: 1;
   visibility: visible;
   transition-delay: .6s;
 }
 
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
+.container .card-horizontal .contentBx .size h3,
+.container .card-horizontal .contentBx .color h3 {
   color: black;
   font-weight: bold;
   font-size: 14px;
@@ -112,7 +112,7 @@
   letter-spacing: 1px;
 }
 
-.container .card .contentBx a {
+.container .card-horizontal .contentBx a {
   display: inline-block;
   padding: 10px 20px;
   background: #232323;
@@ -125,7 +125,7 @@
   transition: .5s;
 }
 
-.container .card:hover .contentBx a {
+.container .card-horizontal:hover .contentBx a {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: .6s;

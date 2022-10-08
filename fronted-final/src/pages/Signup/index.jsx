@@ -133,7 +133,7 @@ function Sigunp () {
           <label htmlFor='password_confirm'>Confirm password</label>
         </div>
 
-        <button className='w-100 btn btn-lg btn-secondary my-3' type='submit'>Sign in</button>
+        <button className='w-100 btn btn-lg btn-primary my-3' type='submit'>Sign in</button>
 
         <p className='mt-5 mb-3 text-muted'>© 2017 – 2021</p>
 
