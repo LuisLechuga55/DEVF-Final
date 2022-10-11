@@ -25,7 +25,7 @@ padding: 1rem;
     width: 5.5rem;
     height: 2rem;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.6s ease-in-out;
   }
 
   .logo-navbar:hover {
@@ -172,6 +172,14 @@ li:first-child {
     text-transform: uppercase;
   }
 }
+.nav-prime {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-prime:hover {
+  color: #fff;
+}
 
 .Drop__main .btn-sign {
   background: #fffa65;
@@ -237,14 +245,6 @@ li:first-child {
   border: transparent;
 }
 
-.cart-shop {
-  background: transparent;
-
-  button {
-    border: none;
-  }
-}
-
 .cart-shop:hover {
   border: none;
 }
@@ -259,11 +259,4 @@ li:first-child {
 
 .shop-logo:hover {
   transform: scale(1.05);
-}
-
-.badge-position {
-  position: relative;
-  margin: 0;
-  right: 1.3rem;
-  bottom: 1.4rem;
 }

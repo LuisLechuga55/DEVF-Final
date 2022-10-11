@@ -52,6 +52,7 @@
 }
 
 .card .contentBox h3 {
+  margin-bottom: 1rem;
   font-size: 18px;
   color: black;
   font-weight: 500;
@@ -66,6 +67,30 @@
   letter-spacing: 1px;
 }
 
+.card .contentBox .btn-card-info {
+  background: transparent;
+  border: none;
+  
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+  }
+}
+
+.card .contentBox .btn-card-info {
+  transition: all 0.4s ease-in-out;
+}
+
+.card .contentBox .btn-card-info:hover {
+  a {
+    color: rgba(#232323, 0.8);
+
+  }
+}
+
 .card .contentBox .buy {
   position: relative;
   top: 100px;
@@ -76,9 +101,14 @@
   text-decoration: none;
   background: #ffce00;
   border-radius: 30px;
+  border: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .contentBox .buy:hover {
+  background: #ffe600;
 }
 
 .card:hover .contentBox .buy {

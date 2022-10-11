@@ -1,0 +1,18 @@
+.btn-post-product {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #232323;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
+}
+
+.btn-post-product:hover {
+  opacity: 0.9;
+}

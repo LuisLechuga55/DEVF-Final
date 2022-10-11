@@ -1,0 +1,57 @@
+.card-perfil {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  object-fit: contain;
+
+  img {
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
+  }
+}
+
+.perfil-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.email-perfil {
+  color: grey;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-perfil-page {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #232323;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+}
+
+.link-perfil {
+  text-decoration: none;
+  font-size: 22px;
+  color: #232323;
+  transition: all 0.5s ease-in-out;
+  margin: 1rem;
+}
+
+.btn-perfil-page:hover, .link-perfil:hover {
+  opacity: 0.8;
+}
+
+.btn-delete-perfil {
+  margin-bottom: 1rem;
+}

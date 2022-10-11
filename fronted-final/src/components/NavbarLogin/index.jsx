@@ -1,8 +1,11 @@
+import { useContext } from 'react'
+import { AuthContext } from '../../context/AuthContext'
 import { Link } from 'react-router-dom'
 import './navbar.scss'
 
-function Navbar (props) {
+function NavbarLogin (props) {
   const { countCartItems } = props
+  const { costumer } = useContext(AuthContext)
 
   return (
     <>
@@ -56,7 +59,13 @@ function Navbar (props) {
             </div>
           </div>
 
-          <div className='Drop__main dropdown text-end  mx-5'>
+          <li>
+            <Link to='/primevideo' className='Navbar-list px-4 mx-4 nav-prime'>
+              Prime Video
+            </Link>
+          </li>
+
+          <div className='Drop__main dropdown text-end'>
 
             <span
                     // dropdown-toggle
@@ -65,24 +74,21 @@ function Navbar (props) {
               data-bs-toggle='dropdown'
               aria-expanded='false'
             >
-              Bienvenido, identificate
+              Bienvenido
             </span>
 
             <ul
-              className='dropdown-menu Dropdown-container'
+              className='dropdown-menu Drop-login-container'
               aria-labelledby='dropdownUser1'
             >
-              <li>
-                <Link to='/signup'>
-                  <button className='btn-sign btn-signup'>Identificate</button>
-                </Link>
-              </li>
+              <Link to='/logout'>
+                <button className='btn-sign btn-logout'>Cerrar Sesion</button>
+              </Link>
 
-              <li>
-                <Link to='/login'>
-                  <button className='btn-login'>Login</button>
-                </Link>
-              </li>
+              <Link to={`/costumer/${costumer.costumerId}`}>
+                <button className='btn-perfil'>Perfil</button>
+              </Link>
+
             </ul>
 
             <li><hr className='dropdown-divider' /></li>
@@ -90,7 +96,7 @@ function Navbar (props) {
           </div>
 
           <li>
-            <Link to='/cart' className='Navbar-list px-1 cart-shop'>
+            <Link to='/cart' className='Navbar-list px-2 mx-1 cart-shop'>
 
               <button className='badge bg-transparent'>
                 <img
@@ -116,4 +122,4 @@ function Navbar (props) {
   )
 }
 
-export default Navbar
+export default NavbarLogin

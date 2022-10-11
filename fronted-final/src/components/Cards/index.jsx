@@ -1,4 +1,5 @@
 // import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './card.scss'
 
 // { image, name, price, id }
@@ -7,7 +8,6 @@ function Card (props) {
   const { product, onAdd } = props
 
   return (
-    // key={id}
     <div className='card'>
 
       <div className='imgBox'>
@@ -16,7 +16,10 @@ function Card (props) {
 
       <div className='contentBox'>
         <h3>{product.product_name}</h3>
-        <h2 className='price'>{product.price} €</h2>
+        <h2 className='price'>€ {product.price}</h2>
+        <button className='btn-card-info my-3'>
+          <Link to={`/product/${product._id}`}>Information</Link>
+        </button>
         <button
           className='buy'
           onClick={() => onAdd(product)}

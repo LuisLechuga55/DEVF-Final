@@ -11,14 +11,17 @@ import Logout from '../pages/Logout'
 import MainProduct from '../pages/MainProducts'
 import Productpage from '../pages/Productpage'
 import ProductCreate from '../pages/ProductCreate'
-import CreateProduct from '../pages/CreateProduct'
 import CartPage from '../pages/CartPage'
+import PrimeVideo from '../pages/PrimeVideo'
+import PerfilPage from '../pages/PerfilPage'
+import NavbarLogin from '../components/NavbarLogin'
 
 function Paths () {
   const { isAuth } = useContext(AuthContext)
 
   const [dataProduct, setDataProduct] = useState([])
   const [cartItems, setCartItems] = useState([])
+
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x._id === product._id)
     if (exist) {
@@ -54,24 +57,50 @@ function Paths () {
 
   return (
     <Router>
-      <Navbar countCartItems={cartItems.length} />
+      {isAuth
+        ? (
+          <NavbarLogin countCartItems={cartItems.length} />
+          )
+        : (
+          <Navbar countCartItems={cartItems.length} />
+          )}
       <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/createproduct' element={<CreateProduct />} />
+
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/logout' element={<Logout />} />
-        <Route path='/product/:id' element={<Productpage />} />
+
         <Route path='/products' element={<MainProduct onAdd={onAdd} dataProduct={dataProduct} />} />
-        <Route path='/cart' element={<CartPage onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />} />
+        <Route path='/product/:id' element={<Productpage onAdd={onAdd} dataProduct={dataProduct} />} />
+
+        <Route path='/costumer/:id' element={<PerfilPage />} />
 
         <Route
-          path='/sellproduct'
+          path='/cart'
           element={
             <Protected isLoggedIn={isAuth}>
-              <ProductCreate />
+              <CartPage onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
             </Protected>
           }
+        />
+
+        <Route
+          path='/publish'
+          element={
+            <Protected isLoggedIn={isAuth}>
+              <ProductCreate onAdd={onAdd} dataProduct={dataProduct} />
+            </Protected>
+            }
+        />
+
+        <Route
+          path='/primevideo'
+          element={
+            <Protected isLoggedIn={isAuth}>
+              <PrimeVideo />
+            </Protected>
+            }
         />
       </Routes>
     </Router>
