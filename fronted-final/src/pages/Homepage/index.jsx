@@ -5,6 +5,12 @@ import CardProduct from '../../components/CardProduct'
 import Footer from '../../components/Footer'
 import './homepage.scss'
 
+// onst { REACT_APP_API_URL } = window.process.env.PORT
+
+// if (!REACT_APP_API_URL) {
+//   throw new Error('missing REACT_APP_API_URL value')
+// }
+
 function Homepage () {
   const [items, setItems] = useState([])
 
@@ -22,7 +28,7 @@ function Homepage () {
         <div className='overlay' />
 
         <video playsInline='playsInline' autoPlay='autoPlay' muted='muted' loop='loop'>
-          <source src='/src/assets/videos/johnny-depp.mp4' type='video/mp4' />
+          <source src='/src/assets/johnny-depp.mp4' type='video/mp4' />
         </video>
 
         <div className='container h-100'>

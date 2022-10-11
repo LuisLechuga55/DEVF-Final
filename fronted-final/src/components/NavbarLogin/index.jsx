@@ -100,7 +100,7 @@ function NavbarLogin (props) {
 
               <button className='badge bg-transparent'>
                 <img
-                  src='/src/assets/img/cartShop.png'
+                  src='https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559842.jpg'
                   className='shop-logo'
                 />
               </button>

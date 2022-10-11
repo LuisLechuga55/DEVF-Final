@@ -33,7 +33,7 @@ function Login () {
       <div className='form-signin my-1'>
         <form onSubmit={handleSubmit}>
 
-          <img className='mb-2' src='src/assets/img/logo-nav.png' alt='' width='72' height='57' />
+          <img className='img-login' src='https://guiaimpresion.com/wp-content/uploads/2020/06/Logotipo-Amazon.jpg' alt='' />
           <h1 className='h3 mb-3 fw-normal'>Please Login</h1>
 
           <div className='form-floating'>
