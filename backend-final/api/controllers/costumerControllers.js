@@ -44,6 +44,11 @@ const loginCostumer = async (req, res) => {
 
     const payload = {
       costumerId: costumer.id,
+      roleCostumer: costumer.role,
+      firstName: costumer.firstName,
+      lastName: costumer.lastName,
+      emailCostumer: costumer.email
+
     };
 
     const token = jwt.encode(payload, config.token.secret);
@@ -65,7 +70,7 @@ const loginCostumer = async (req, res) => {
 
 const getAllCostumer = async (req, res) => {
   try {
-    const costumer = await Costumer.find({}, {password: 0, role: 0});
+    const costumer = await Costumer.find({}, {password: 0});
 
     console.log('Usuarios encontrados con exito');
 
@@ -87,7 +92,6 @@ const getOneCostumer = async (req, res) => {
     const costumer = await Costumer.findById(id);
 
     costumer.password = undefined;
-    costumer.role = undefined;
 
     console.log('Usuario encontrado con exito');
 
@@ -99,7 +103,7 @@ const getOneCostumer = async (req, res) => {
   } catch (error) {
     return res.status(500).json({
       msg: 'Error al encontrar Usuario',
-      data: error,
+      data: error.message,
     });
   }
 };
