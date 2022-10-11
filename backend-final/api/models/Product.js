@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import CostumerModel from './Costumer.js'
 
 const productSchema = new mongoose.Schema({
   nameProduct: {
@@ -19,13 +20,17 @@ const productSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ['Automotriz', 'Belleza', 'Cine y TV', 'Tecnologia', 'Hogar', 'Deportes', 'Videojuegos', 'Jugueteria'],
+    enum: ['Automotriz', 'Belleza', 'Entretenimiento', 'Tecnologia', 'Hogar', 'Deportes', 'Videojuegos', 'Jugueteria'],
     required: true,
   },
   infoProduct: {
     type: String,
     required: true,
   },
+  costumer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Costumer',
+  }
 },
   { timestamps: true }
 );
