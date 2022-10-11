@@ -63,6 +63,8 @@ const deleteProduct = async (req, res) => {
 const getProductFilters = async (req, res) => {
   const minPrice = req.query.minPrice;
   const maxPrice = req.query.maxPrice;
+  const category = req.query.category;
+  const nameProduct = req.query.nameProduct;
   
   const prices = {
     price: { $gte : minPrice, $lte : maxPrice },
@@ -70,15 +72,15 @@ const getProductFilters = async (req, res) => {
 
   const filters = req.query;
 
-  const filterObject = Object.assign({}, prices, filters)
+  const filterObject = Object.assign({}, prices, category, nameProduct ,filters)
 
   try {
     const products = await Product.find(filterObject);
 
-    console.log('Productos encontrados con exito');
+    console.log('Productos encontrados mediante filtros');
 
     return res.json({
-      msg: 'Productos encontrados',
+      msg: 'Productos encontrados mediante filtros',
       data: products,
     });
 
