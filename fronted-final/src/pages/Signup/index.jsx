@@ -11,7 +11,7 @@ function Sigunp () {
       console.log('Password coincide')
 
       delete data.password_confirm
-      axios.post('http://localhost:5500/ecommerce/costumer/register', data)
+      axios.post('https://devf-final-backend.herokuapp.com/ecommerce/costumer/register', data)
         .then((response) => {
           if (response.status === 200) {
             data.password = undefined

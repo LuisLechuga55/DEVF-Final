@@ -11,7 +11,7 @@ function PerfilPage () {
   const navigate = useNavigate()
 
   const updatePerfil = (data) => {
-    axios.patch(`http://localhost:5500/ecommerce/costumer/${costumer.costumerId}`, data)
+    axios.patch(`https://devf-final-backend.herokuapp.com/ecommerce/costumer/${costumer.costumerId}`, data)
       .then((res) => {
         if (res.status === 200) {
           navigate('/login')
@@ -23,7 +23,7 @@ function PerfilPage () {
   }
 
   const deletePerfil = (data) => {
-    axios.delete(`http://localhost:5500/ecommerce/costumer/${costumer.costumerId}`)
+    axios.delete(`https://devf-final-backend.herokuapp.com/ecommerce/costumer/${costumer.costumerId}`)
       .then((res) => {
         if (res.status === 200) {
           console.log(res.data)
@@ -46,7 +46,7 @@ function PerfilPage () {
 
       </div> */}
 
-      <div class='card-perfil my-4'>
+      <div className='card-perfil my-4'>
         <img
           src='https://static.vecteezy.com/system/resources/previews/001/840/618/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg'
           alt='Image Not Found'
@@ -55,7 +55,7 @@ function PerfilPage () {
         <h1 className='perfil-name'>{costumer.firstName}</h1>
         <h4 className='perfil-name'>{costumer.lastName}</h4>
 
-        <p class='email-perfil'>{costumer.emailCostumer}</p>
+        <p className='email-perfil'>{costumer.emailCostumer}</p>
 
         <a href='https://www.facebook.com/luisalfonso.lechugahernandez/' target='blank'>
           <svg

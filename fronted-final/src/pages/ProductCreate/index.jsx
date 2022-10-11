@@ -10,7 +10,7 @@ function ProductCreate () {
   const { costumer } = useContext(AuthContext)
 
   const sendProduct = (data) => {
-    axios.post('http://localhost:5500/ecommerce/product/', data)
+    axios.post('https://devf-final-backend.herokuapp.com/ecommerce/product/', data)
       .then((response) => {
         if (response.status === 200) {
           console.log(response.data)
@@ -139,10 +139,17 @@ function ProductCreate () {
             </form>
           </main>
 
-          : <Link to={`/costumer/${costumer.costumerId}`}>Para acceder, contrate el paquete premium</Link>}
+          : <div className='main-services-prime'>
+            <button className='btn-services-prime'>
+              <Link to={`/costumer/${costumer.costumerId}`}>Para acceder contrate el paquete premium</Link>
+            </button>
+            </div>}
 
         {costumer.roleCostumer === 'costumer' &&
-          <h4>Por favor, actualiza tu cuenta</h4>}
+          <div className='main-text-services'>
+            <h4 className='text-services-prime'>Por favor, actualiza tu cuenta</h4>
+          </div>}
+
       </div>
 
     </>

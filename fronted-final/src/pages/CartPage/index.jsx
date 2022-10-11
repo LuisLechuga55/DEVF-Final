@@ -112,7 +112,7 @@ function CartPage (props) {
             <div className='btn-checkout-container'>
               <button
                 className='btn-checkout'
-                onClick={() => alert('Implement Checkout')}
+                onClick={() => alert('Implementar el Checkout')}
               >
                 Checkout
               </button>

@@ -11,7 +11,7 @@ function Login () {
   const { loginCostumer } = useContext(AuthContext)
 
   const sendData = (data) => {
-    axios.post('http://localhost:5500/ecommerce/costumer/login', data)
+    axios.post('https://devf-final-backend.herokuapp.com/ecommerce/costumer/login', data)
       .then((response) => {
         console.log(response.data)
 

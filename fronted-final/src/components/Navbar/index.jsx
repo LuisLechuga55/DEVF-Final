@@ -74,7 +74,7 @@ function Navbar (props) {
             >
               <li>
                 <Link to='/signup'>
-                  <button className='btn-sign btn-signup'>Identificate</button>
+                  <button className='btn-sign btn-signup'>Crear Cuenta</button>
                 </Link>
               </li>
 

@@ -27,9 +27,11 @@ function Homepage () {
 
         <div className='overlay' />
 
-        <video playsInline='playsInline' autoPlay='autoPlay' muted='muted' loop='loop'>
+        {/* <video playsInline='playsInline' autoPlay='autoPlay' muted='muted' loop='loop'>
           <source src='/src/assets/johnny-depp.mp4' type='video/mp4' />
-        </video>
+        </video> */}
+
+        <img src='https://918429.smushcdn.com/2325059/wp-content/uploads/2020/10/0000138591.jpg?lossy=1&strip=1&webp=1' alt='' />
 
         <div className='container h-100'>
           <div className='d-flex h-100 text-center align-items-center'>

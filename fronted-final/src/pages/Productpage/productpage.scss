@@ -1,14 +1,47 @@
 .card-single {
   background: #cecece;
-  height: 70vh;
+  height: 90vh;
   padding: 5rem 0;
+  object-fit: cover;
 
   img {
-    padding-left: 1rem;
+    width: 30rem;
+    height: 30rem;
   }
 }
 
-.card-single .buy {
+.single-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 20rem;
+}
+
+.single-product > img {
+  margin-right: 2rem;
+}
+.single-product-info {
+  padding: 0rem 15rem 0rem 0rem;
+  font-size: 18px;
+}
+
+.single-product-info p {
+  margin: 2rem 0;
+}
+
+.single-product-price {
+  font-size: 2rem;
+}
+
+.single-product-genre {
+  display: inline-block;
+  border-radius: 16px;
+  margin: 0.5rem 1rem 0.5rem 0;
+  padding: 4px 18px;
+  background: rgba(47, 47, 47, 0.8);
+  color: #f4f4f4;
+}
+
+.single-product .buy {
   padding: 10px 20px;
   color: #000000;
   text-decoration: none;

@@ -16,3 +16,45 @@
 .btn-post-product:hover {
   opacity: 0.9;
 }
+
+.main-services-prime {  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10rem;
+  width: auto;
+}
+
+.btn-services-prime {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: black;
+    font-size: 1.5rem;
+  }
+}
+
+.btn-services-prime a {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-services-prime a:hover {
+  color: gray;
+}
+
+.main-text-services {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  height: 10rem;
+  width: auto;
+
+  h4 {
+    color: black;
+  }
+}
