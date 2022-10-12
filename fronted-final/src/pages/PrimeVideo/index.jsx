@@ -37,7 +37,7 @@ function PrimeVideo () {
 
             <div className='featured_wrapper'>
 
-              <img className='img-main-primevideo' src='https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/12/witcher-netflix.jpg?itok=68bqOKQv' className='featured' />
+              <img className='img-main-primevideo' src='https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/12/witcher-netflix.jpg?itok=68bqOKQv' />
 
               <div className='title_wrapper'>
 
