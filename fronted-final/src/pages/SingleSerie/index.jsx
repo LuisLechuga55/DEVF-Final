@@ -32,33 +32,50 @@ function SingleSerie () {
 
   return (
     <>
-      <div className='singleshow'>
-        <img className='img-fluid' src={singleSerie.image ? singleSerie.image.original : 'https://cdn-icons-png.flaticon.com/512/14/14178.png'} alt='' />
+      <div className='single-movie-card'>
 
-        <div className='singleshow-info'>
-          <h1>{singleSerie.name}</h1>
+        <div className='single-movie-container'>
 
-          {singleSerie.genres && singleSerie.genres.map(genre =>
-            <span key={genre} className='singleshow-genre'><strong>{genre}</strong></span>
-          )}
+          <img
+            className='cover'
+            src={singleSerie.image ? singleSerie.image.original : 'https://cdn-icons-png.flaticon.com/512/14/14178.png'}
+          />
 
-          <p>
-            <strong>Status: </strong>{singleSerie.status ? singleSerie.status : 'Sin Status'}
-          </p>
+          <div className='hero'>
 
-          <p>
-            <strong>Rating: </strong>{rating || 'Sin Rating'}
-          </p>
+            <img
+              src={singleSerie.image ? singleSerie.image.original : 'https://cdn-icons-png.flaticon.com/512/14/14178.png'}
+              alt='Image Not Found'
+            />
 
-          <p>
-            <strong>Official Web: </strong>{singleSerie.officialSite ? (<a href={singleSerie.officialSite} target='_blank' rel='noreferrer'>{singleSerie.officialSite}</a>) : ('No Pagina Web')}
-          </p>
+            <div className='details'>
 
-          <hr />
+              <div className='title1'>{singleSerie.name}<span>{rating || 'Sin Rating'}</span></div>
 
-          <p>{singleSerie.summary && removeTags(singleSerie.summary)}</p>
+              <div className='title2'>{singleSerie.status ? singleSerie.status : 'Sin Status'}</div>
+
+            </div>
+
+          </div>
+
+          <div className='description'>
+
+            <div className='column1'>
+              {singleSerie.genres && singleSerie.genres.map(genre =>
+                <span key={genre} className='tag'><strong>{genre}</strong></span>)}
+            </div>
+
+            <div className='column2'>
+
+              <h5><strong>Description: </strong></h5>
+              <p>{singleSerie.summary && removeTags(singleSerie.summary)}</p>
+
+            </div>
+
+          </div>
 
         </div>
+
       </div>
     </>
   )

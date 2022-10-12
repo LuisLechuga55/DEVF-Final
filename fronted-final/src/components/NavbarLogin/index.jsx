@@ -69,12 +69,12 @@ function NavbarLogin (props) {
 
             <span
                     // dropdown-toggle
-              className='d-block text-decoration-none dropdown-toggle'
+              className='d-block text-decoration-none'
               id='dropdownUser1'
               data-bs-toggle='dropdown'
               aria-expanded='false'
             >
-              Bienvenido
+              Hola, {costumer.firstName}
             </span>
 
             <ul
