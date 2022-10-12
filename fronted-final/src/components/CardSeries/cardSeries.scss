@@ -1,0 +1,117 @@
+.card-serie {
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  height: 450px;
+  margin: 50px auto;
+  background: black;
+  border: 2px solid #232323;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.5);
+  margin-left: 4.5rem;
+  margin-top: 6rem;
+}
+
+.card-serie .img1 {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 310px 440px;
+  background-position: left top;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-serie .img2 {
+  position: absolute;
+  object-fit: cover;
+  bottom: 10%;
+	object-position: bottom -3.4rem right 0px;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-size: 310px 440px;
+  background-position: left bottom;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-serie .card-title-series {
+  height: 22%;
+  width: 100%;
+  font-size: 20px;
+  text-align: start;
+  font-weight: 700;
+  color: #FFFC;
+  padding: 1rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -95px 28px -25px #000 inset;
+}
+
+.card-serie .card-text-series {
+  position: absolute;
+  bottom: 80px;
+  height: 120px;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  transform: rotate(90deg);
+  transform-origin: 0 100px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.card-serie .card-category-series {
+  position: absolute;
+  left: 10px;
+  top: 140px;
+  padding: 3px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background: #2a264f;
+  color: #fff;
+  border-radius: 5px;
+  transform: translate(-160px, 0);
+  transition: all 0.5s ease;
+}
+
+.card-serie .card-rating-series {
+  position: absolute;
+  left: 10px;
+  top: 175px;
+  padding: 3px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background: #8b2463;
+  color: #fff;
+  border-radius: 5px;
+  transform: translate(-160px, 0);
+  transition: all 0.5s ease 0.15s;
+}
+
+.card-serie:hover .img1 {
+  transform: rotate(10deg) scale(1.3) translate(20px, 0);
+  transform-origin: 300px 300px;
+  opacity: 0.5;
+}
+
+.card-serie:hover .img2 {
+  transform: rotate(90deg) translate(0px, 150px);
+  transform-origin: -20px 200px;
+}
+
+.card-serie:hover .card-text-series {
+  opacity: 0.8;
+  transform: rotate(0deg);
+}
+
+.card-serie:hover .card-rating-series,
+.card-serie:hover .card-category-series {
+  transform: translate(0);
+}

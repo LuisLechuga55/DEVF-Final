@@ -61,7 +61,7 @@ function NavbarLogin (props) {
 
           <li>
             <Link to='/primevideo' className='Navbar-list px-4 mx-4 nav-prime'>
-              Prime Video
+              Prime Series
             </Link>
           </li>
 

@@ -3,18 +3,20 @@ import { useContext, useState, useEffect } from 'react'
 import { AuthContext } from '../context/AuthContext'
 import axios from 'axios'
 import Protected from '../hoc/Protected'
-import Navbar from '../components/Navbar'
-import Homepage from '../pages/Homepage'
-import Login from '../pages/Login'
 import Signup from '../pages/Signup'
+import Login from '../pages/Login'
 import Logout from '../pages/Logout'
+import Navbar from '../components/Navbar'
+import NavbarLogin from '../components/NavbarLogin'
+import Homepage from '../pages/Homepage'
 import MainProduct from '../pages/MainProducts'
 import Productpage from '../pages/Productpage'
-import ProductCreate from '../pages/ProductCreate'
 import CartPage from '../pages/CartPage'
-import PrimeVideo from '../pages/PrimeVideo'
 import PerfilPage from '../pages/PerfilPage'
-import NavbarLogin from '../components/NavbarLogin'
+import ProductCreate from '../pages/ProductCreate'
+
+import PrimeVideo from '../pages/PrimeVideo'
+import SingleSerie from '../pages/SingleSerie'
 
 function Paths () {
   const { isAuth } = useContext(AuthContext)
@@ -102,6 +104,16 @@ function Paths () {
             </Protected>
             }
         />
+
+        <Route
+          path='/primevideo/:id'
+          element={
+            <Protected isLoggedIn={isAuth}>
+              <SingleSerie />
+            </Protected>
+          }
+        />
+
       </Routes>
     </Router>
   )
