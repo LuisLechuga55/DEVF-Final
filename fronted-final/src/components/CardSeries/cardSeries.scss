@@ -53,11 +53,11 @@
 
 .card-serie .card-text-series {
   position: absolute;
-  bottom: 80px;
+  bottom: 75px;
   height: 120px;
-  padding: 15px 10px;
+  padding: 18px 14px;
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
   color: #fff;
   transform: rotate(90deg);
   transform-origin: 0 100px;
@@ -68,13 +68,13 @@
 .card-serie .card-category-series {
   position: absolute;
   left: 10px;
-  top: 140px;
+  top: 130px;
   padding: 3px 10px;
   font-size: 15px;
   font-weight: 700;
   text-align: center;
-  background: #2a264f;
-  color: #fff;
+  background: whitesmoke;
+  color: #000;
   border-radius: 5px;
   transform: translate(-160px, 0);
   transition: all 0.5s ease;
@@ -88,9 +88,9 @@
   font-size: 15px;
   font-weight: 700;
   text-align: center;
-  background: #8b2463;
-  color: #fff;
-  border-radius: 5px;
+  background: #cecece;
+  color: #000;
+  border-radius: 16px;
   transform: translate(-160px, 0);
   transition: all 0.5s ease 0.15s;
 }
@@ -98,7 +98,7 @@
 .card-serie:hover .img1 {
   transform: rotate(10deg) scale(1.3) translate(20px, 0);
   transform-origin: 300px 300px;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .card-serie:hover .img2 {

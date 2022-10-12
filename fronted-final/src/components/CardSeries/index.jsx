@@ -17,11 +17,11 @@ function CardSeries ({ id, image, language, name, rating, status }) {
 
             <div className='card-title-series'>{name}</div>
 
-            <div className='card-text-series'>{status}</div>
+            <div className='card-text-series'><i class='bi bi-camera-reels' /> {status}</div>
 
-            <div className='card-category-series'>{language} <i className='fas fa-film' /></div>
+            <div className='card-category-series'><i className='bi bi-translate' /> {language}</div>
 
-            <div className='card-rating-series'>{rating}  <i className='far fa-eye' /> </div>
+            <div className='card-rating-series'><i className='bi bi-star-fill' /> {rating}</div>
 
           </Link>
         </div>

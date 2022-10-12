@@ -8,6 +8,7 @@ function PrimeVideo () {
   const [searchResult, setSearchResult] = useState([])
 
   const searchHandle = (e) => {
+    e.preventDefault()
     setSearchForm(e.target.value.toLowerCase())
   }
 
@@ -26,23 +27,21 @@ function PrimeVideo () {
     fetchResult()
   }, [])
 
-  console.log(searchResult)
-
   return (
     <>
       <div className='main-series-container'>
 
-        <div class='top-primevideo'>
+        <div className='top-primevideo'>
 
-          <div class='columns-primevideo'>
+          <div className='columns-primevideo'>
 
-            <div class='featured_wrapper'>
+            <div className='featured_wrapper'>
 
-              <img className='img-main-primevideo' src='https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/12/witcher-netflix.jpg?itok=68bqOKQv' class='featured' />
+              <img className='img-main-primevideo' src='https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/12/witcher-netflix.jpg?itok=68bqOKQv' className='featured' />
 
-              <div class='title_wrapper'>
+              <div className='title_wrapper'>
 
-                <span class='text-primevideo'>Search Series</span>
+                <span className='text-primevideo'>Search Series</span>
 
                 <form className='searchbar_form'>
                   <input
